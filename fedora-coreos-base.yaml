@@ -4,6 +4,9 @@ include: minimal.yaml
 # Modern defaults we want
 boot_location: new
 tmp-is-dir: true
+initramfs-args:
+    - "--add-drivers"
+    - "mptspi vmw_pvscsi"
 
 # Required by Ignition, and makes the system not compatible with Anaconda
 machineid-compat: false
